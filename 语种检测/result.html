@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			算法应用
+		</div>
+		<h2>机器学习语种识别器</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: left;"><b>算法检测结果如下</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == "en"%}
+	<h2>这是<font color="red">英语</font></h2>
+	{% elif prediction == "de"%}
+	<h2>这是<font color="red">德语</font></h2>
+	{% elif prediction == "nl"%}
+	<h2>这是<font color="red">荷兰语</font></h2>
+	{% elif prediction == "es"%}
+	<h2>这是<font color="red">西班牙语</font></h2>
+	{% elif prediction == "it"%}
+	<h2>这是<font color="red">意大利语</font></h2>
+	{% elif prediction == "fr"%}
+	<h2>这是<font color="red">法语</font></h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
